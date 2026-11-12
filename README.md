@@ -22,6 +22,10 @@ python3 -m unittest discover . -v
 
 Run `make verify` with Make and Python 3 installed. The target runs the documented sample through the project CLI. It also runs the existing Python unit tests.
 
+## Business problem
+
+A broad cache purge can increase origin traffic. Operators need approval and a rollback note before acting on a global request.
+
 ## Project walkthrough
 
 ```mermaid

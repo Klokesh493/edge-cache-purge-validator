@@ -2,7 +2,7 @@
 
 ## Business problem
 
-Validates cache purge requests for scope, approval, and rollback notes.
+A broad cache purge can increase origin traffic. Operators need approval and a rollback note before acting on a global request.
 
 ## Reproduce the workflow
 
