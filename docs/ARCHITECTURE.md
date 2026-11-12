@@ -4,11 +4,14 @@ Validates cache purge requests for scope, approval, and rollback notes.
 
 ```mermaid
 flowchart LR
-    N0["sample_purges.csv"]
-    N1["purge_validator.py"]
-    N2["validate"]
-    N3["Result for operator review"]
-    N0 --> N1 --> N2 --> N3
+    A["Purge request CSV"]
+    B["Check approval for global scope and require rollback notes"]
+    C{"Validation issues present?"}
+    D["Report missing approval or rollback notes"]
+    E["Request passes the local checks"]
+    A --> B --> C
+    C -->|Yes| D
+    C -->|No| E
 ```
 
 ## Operational boundaries
